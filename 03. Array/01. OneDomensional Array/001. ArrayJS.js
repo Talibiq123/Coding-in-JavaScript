@@ -20,7 +20,7 @@ const fourthArray = new Array(2, 3);
 
 
 // Accessing array elements
-console.log(arr);
+// console.log(arr);
 // console.log(arr[0]);
 
 
@@ -46,37 +46,69 @@ for(let i = 0; i < arr.length; i++) {
     // console.log(arr[i]);
 }
 
+// for..of
+const veggies = ['Potato', "Onion", 'Cucumber', 'Carrot', 'Radish', 'Spinach'];
+for(veg of veggies) {
+    // console.log(veg);
+}
+
+for(let key in veggies) { //don't use for..in for arrays
+    // console.log(veggies[key]);
+}
 
 // in-built fucntions in JavaScript
 const numbers = new Array();
-// 1. numbers.push(1): to insert an element
-let len = numbers.push(1);
-len = numbers.push(2);
+// 1. numbers.push(1): adds an element to the end.
+// let len = numbers.push(1);
+// len = numbers.push(2);
 // console.log(len);
 // console.log(numbers);
 
-// 2. numbers.pop(1): 
+// 2. numbers.pop(1): takes an element from the end
 // let poppedNumber = numbers.pop();
 // console.log(poppedNumber);
 // console.log(numbers);
 
-// 3.  numbers.shift(1):
+// 3.  numbers.shift(1): Extracts the first element of the array and returns it
+// console.log(numbers);
+// console.log(numbers.shift());
+// console.log(numbers);
 
 
-// 4. numbers.unshift(1)
+// 4. numbers.unshift(1): Add the element to the beginning of the array
+// console.log(numbers);
+// console.log(numbers.unshift());
+// console.log(numbers);
 
 
 // add element using length
 numbers[numbers.length] = "nodejs";
-console.log(numbers);
+// console.log(numbers);
 
 // typeof numbers
-console.log(typeof numbers);
+// console.log(typeof numbers);
 
 
 // Recognizing a JavaScript Array
 // 1. By using Array.isArray() method
-console.log(Array.isArray(numbers));
+// console.log(Array.isArray(numbers));
 
 // 2. By using instanceof method
-console.log(numbers instanceof Array);
+// console.log(numbers instanceof Array);
+
+
+// mix of values
+let mix = [ 'Apple', { name: 'John' }, true, function() { console.log('hello'); } ];
+
+// get the object at index 1 and then show its name
+// console.log(mix[1].name); // John
+
+// get the function at index 3 and run it
+// mix[3](); // hello
+
+// at(): for -ve indexing
+const check = [3, 2, 1];
+// console.log(check.at(-2));
+
+// arr.at(-2);
+// mix.at(-1)();
